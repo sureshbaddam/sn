@@ -1,17 +1,24 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Navbar.css';
 import logo from "../Assets/logo1.png";
+import '../styles/Navbar.css';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  // Toggle the mobile menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Close the mobile menu when a link is clicked
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
+      {/* Logo */}
       <div className="logo">
         <img src={logo} alt="SNGR Furniture" />
       </div>
@@ -29,30 +36,44 @@ const Navbar = () => {
       {/* Navigation Links */}
       <ul className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" onClick={closeMenu}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/products">Products</Link>
+          <Link to="/products" onClick={closeMenu}>
+            Products
+          </Link>
         </li>
         <li>
-          <Link to="/custom-orders">Custom Orders</Link>
+          <Link to="/custom-orders" onClick={closeMenu}>
+            Custom Orders
+          </Link>
         </li>
         <li>
-          <Link to="/gallery">Gallery</Link>
+          <Link to="/gallery" onClick={closeMenu}>
+            Gallery
+          </Link>
         </li>
         <li>
-          <Link to="/about-us">About Us</Link>
+          <Link to="/about-us" onClick={closeMenu}>
+            About Us
+          </Link>
         </li>
         <li>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" onClick={closeMenu}>
+            Contact
+          </Link>
         </li>
         <li>
-          <Link to="/feedback">Feedback</Link>
+          <Link to="/feedback" onClick={closeMenu}>
+            Feedback
+          </Link>
         </li>
       </ul>
 
       {/* Login/Signup Button */}
-      <button className="login-signup">
+      <button className="login-signup" onClick={closeMenu}>
         <Link to="/login" style={{ color: 'white', textDecoration: 'none' }}>
           Login/Signup
         </Link>
