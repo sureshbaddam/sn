@@ -1,0 +1,120 @@
+/* Admin Panel Container */
+.admin-panel {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.admin-panel h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+/* Form Styling */
+.admin-panel form div {
+  margin-bottom: 15px;
+}
+
+.admin-panel label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333;
+}
+
+.admin-panel input,
+.admin-panel textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition:
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+
+.admin-panel input:focus,
+.admin-panel textarea:focus {
+  border-color: #f39c12;
+  box-shadow: 0 0 8px rgba(243, 156, 18, 0.2);
+  outline: none;
+}
+
+.admin-panel textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Button Styling */
+.admin-panel button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+}
+
+.admin-panel button:hover {
+  background-color: #e67e22;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-panel {
+    padding: 15px;
+    margin: 30px auto;
+  }
+
+  .admin-panel h1 {
+    font-size: 1.75rem; /* Smaller heading for smaller screens */
+  }
+
+  .admin-panel input,
+  .admin-panel textarea {
+    padding: 8px;
+    font-size: 0.9rem; /* Smaller font size for better readability */
+  }
+
+  .admin-panel button {
+    padding: 10px;
+    font-size: 0.9rem; /* Smaller button for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-panel {
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  .admin-panel h1 {
+    font-size: 1.5rem; /* Even smaller heading for mobile */
+  }
+
+  .admin-panel input,
+  .admin-panel textarea {
+    padding: 6px;
+    font-size: 0.8rem; /* Smaller font size for mobile */
+  }
+
+  .admin-panel button {
+    padding: 8px;
+    font-size: 0.8rem; /* Smaller button for mobile */
+  }
+}
